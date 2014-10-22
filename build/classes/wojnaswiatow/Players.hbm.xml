@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-05-14 13:30:53 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="wojnaswiatow.Players" table="players" catalog="gra">
+        <id name="playerId" type="int">
+            <column name="PlayerID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="20" not-null="true" />
+        </property>
+        <property name="level" type="int">
+            <column name="Level" not-null="true" />
+        </property>
+        <property name="score" type="int">
+            <column name="Score" not-null="true" />
+        </property>    
+        <property name="games" type="int">
+            <column name="Games" not-null="true" />
+        </property>
+        <property name="mail" type="string">
+            <column name="Mail" length="25" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
